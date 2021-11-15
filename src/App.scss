@@ -1,0 +1,399 @@
+@import "./Variables";
+@import "~bootstrap/scss/bootstrap";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: $bg_color;
+    position: relative;
+    height: 100%;
+}
+
+.not-found {
+    background: $bg_color;
+    color: white;
+
+    h3 {
+        font-size: 10rem;
+        font-weight: 400;
+    }
+ 
+}
+
+.v-center {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+h4 {
+    font-size: 1.3rem;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    opacity: 1;
+    color: $brand_black;
+}
+
+.cur-ptr {
+    cursor: pointer;
+}
+
+
+.side-nav {
+    width: 250px;
+    position: fixed;
+    background: $white_color;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    .logo {
+        margin-bottom: 4rem;
+    }
+    .side-nav-items {
+        .item {
+            color: $light_black_color;
+            font-size: 0.95rem;
+            line-height: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            .badge.bg {
+                color: $orange_color;
+                background: $badge_bg_color;
+                float: right;
+                line-height: 20px;
+                height: 26px;
+                width: 26px;
+                border-radius: 50%;
+            }
+            .item-icon {
+                display: inline-block;
+                width: 40px;
+            }
+        }
+        .item.active {
+            color: $orange_color;
+        }
+    }
+    
+}
+.right-side-nav-content {
+    .notifications {
+        .view-more {
+            color: $link_color;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.4rem;
+            cursor: pointer;
+        }
+        .title {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            font-weight: 400;
+            color: $notification_color;
+            padding-bottom: 0.2em;
+        }
+        .divider {
+            .divider-filled {
+                width: 15%;
+                height: 3px;
+                background-color: $divider_orange_color;
+                line-height: 1px;
+                border-radius: 5px;
+                display: inline-block;
+            }
+            .divider-unfilled {
+                width: 85%;
+                height: 1.5px;
+                background-color: $divider_grey_color;
+                line-height: 1px;
+                display: inline-block;
+            }
+        }
+        .noti-content {
+            
+            .bubble {
+                display: inline-block;
+                .bubble-item {
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  .child-bubble-item {
+                      width: 10px;
+                      height: 10px;
+                      border-radius: 50%;
+                      opacity: 0.3;
+                }
+              }
+              .bubble-item-blue {
+                background: $bubble_blue_color;
+              }
+              .bubble-item-main-blue {
+                background: $bubble_blue_bg_color;
+              }
+
+              .bubble-item-red {
+                background: $bubble_red_color;
+              }
+              .bubble-item-main-red {
+                background: $bubble_red_bg_color;
+              }
+
+              .bubble-item-green {
+                background: $bubble_green_color;
+              }
+              .bubble-item-main-green {
+                background: $bubble_green_bg_color;
+              }
+
+              .vertical-line {
+                height: 60px;
+                border-left: 2px solid $divider_grey_color;
+                margin-left: 0.5rem;
+                display: inline-block;
+                margin-top: 0.3rem;
+              }
+            }
+         
+        
+          .noti-item {
+            font-size: 0.82rem;
+            font-weight: 400;
+            color: $notification_fade_color;
+          }
+          .noti-item.active-item {
+            color: $notification_color;
+          }
+          div.rt {
+            text-align: right;
+            padding-right: 0;
+          }
+          .noti-time {
+            color: $noti_time_color;
+            font-size: 0.7rem;
+            // text-align: right;
+          }
+       
+        }
+        
+    }
+}
+.layout-content {
+    margin-left: 250px;
+    margin-right: 300px;
+}
+@media screen and (max-width: 768px) {
+    .layout-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .dashboard-content h3.title.mbl {
+        font-size: 1.1rem;
+    }
+    .dashboard-content .app-title.mbl {
+        font-size: 1rem;
+
+    }
+    .tr.mbl {
+        text-align: left;
+        margin-top: 0.5rem;
+    }
+    .tr.sal.oppt {
+        text-align: left;
+    }
+    .prfl-img, .prfl-name {
+        text-align: center;
+    }
+}
+.right-side-nav-content {
+    .notifications {
+        width: 300px;
+        position: fixed;
+        background: $white_color;
+        height: 65%;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+    .help-section {
+        width: 280px;
+        position: fixed;
+        background: $white_color;
+        height: 30%;
+        right: 20px;
+        top: 68%;
+        z-index: 1;
+        overflow-x: hidden;
+        .help-section-pic {
+            height: 85px;
+            width: 240px;
+        }
+        .title {
+            font-size: 1.2rem;
+            color: $light_black_color;
+            font-weight: 500;
+        }
+        .subtitle {
+            font-size: 0.85rem;
+            color: $light_black_color;
+            opacity: 0.7;
+        }
+        .contact-btn {
+            text-align: center;
+            background: $orange_color;
+            color: $white_color;
+            width: 118px;
+            padding: 0.4em;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+  
+}
+.tr {
+    text-align: right;
+}
+.warn-color {
+    color: $warn_color;
+}
+.grey-color.clock {
+    color: $clock_fade_color;
+}
+.light-black.clock {
+    color: $profile_key_color;
+}
+.dashboard-content {
+    h4 {
+        color: $orange_color;
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 1.8rem;
+    }
+    .profile-key {
+        font-size: 0.85rem;
+        line-height: 1rem;
+        color: $profile_key_color;
+        display: inline-block;
+        width: 200px;
+        opacity: 0.6;
+    }
+    .profile-val {
+        font-size: 0.85rem;
+        line-height: 1rem;
+        font-weight: 500;
+        color: #000;
+        display: inline-block;
+    }
+    .app-card {
+        padding: 1em 3em;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
+    }
+    .app-card.br-red {
+        border-left: 15px solid $warn_color;
+    }
+    .app-divider {
+        background: $app_divider_color;
+        opacity: 0.2;
+        height: 1.5px;
+        margin: 1rem 0rem;
+
+    }
+    .view-details {
+        color: $orange_color;
+        font-size: 0.95rem;
+        line-height: 1rem;
+        font-weight: 450;
+        cursor: pointer;
+    }
+    .app-title {
+        color: $app_title_color;
+        font-size: 1.1rem;
+        line-height: 1rem;
+        opacity: 0.8;
+    }
+    .app.title-type {
+        color: $orange_color;
+        font-weight: 500;
+    }
+    .profile-val.app-val {
+        color: $profile_key_color;
+        font-weight: normal;
+    }
+    .cur-ptr {
+        cursor: pointer;
+    }
+    .view-all {
+        color: $view_all_color;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+    .oppt-item {
+        color: $oppt_item_color;
+        font-size: 1rem;
+        line-height: 1.35rem;
+    }
+    .oppt-item.active {
+        color: $light_black_color;
+    }
+    .dot {
+        display: inline-block;
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+        background: $dot_color;
+        margin-right: 0.2rem;
+    }
+    .app.title-type.oppt {
+        color: $app_title_color;
+    }
+    .sal.oppt {
+        color: $app_title_color;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    .common-btn {
+        border-radius: 14px;
+        width: 150px;
+        text-align: center;
+        padding: 0.25em;
+        box-shadow:  0px 3px 6px 0px rgba(190,190,190,0.5);
+    }
+    .oppt.apply-btn {
+        background: $orange_color;
+        color: $white_color;
+    }
+    .oppt.nt-btn {
+        background: $dot_color;
+        color: $clock_fade_color;
+    }
+    .app-card.bg-grey {
+        background: $grey_bg_color;
+    }
+    .oppt-ptr {
+        height: 11px;
+        width: 8px;
+        margin-left: 0.5rem;
+        margin-top: 0.1rem;
+        border-radius: 50%;
+        background: $solid_red_color;
+        padding-right: 0;
+    }
+    h3.title {
+        font-size: 1.5rem;
+    }
+}
